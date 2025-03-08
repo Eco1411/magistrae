@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer votre vidéo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #cc0000;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-delete {
+            display: inline-block;
+            background-color: #ff3333;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-delete:hover {
+            background-color: #cc0000;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚨 Suppression requise</h1>
+        <p>Votre vidéo ne respecte pas nos règles et doit être supprimée immédiatement.</p>
+        
+        <div class="video-container">
+            <!-- Remplace "VIDEO_ID" par l'ID réel de la vidéo Google Drive -->
+            <iframe src="https://drive.google.com/file/d/151dxoyn-7BZWwzFJ-eLUX1_ddhRDL2hU/preview" allowfullscreen></iframe>
+        </div>
+
+        <p><strong>⛔ Si cette vidéo n'est pas supprimée, votre compte risque d'être restreint.</strong></p>
+
+        <!-- Remplace "FILE_ID" par l'ID réel de la vidéo Google Drive -->
+        <a href="https://drive.google.com/uc?id=VIDEO_ID&export=delete" class="btn-delete" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette vidéo ? Cette action est irréversible.')">
+            Supprimer la vidéo
+        </a>
+
+        <p class="footer">Si vous pensez qu'il s'agit d'une erreur, contactez notre support : <a href="mailto:support@dailymotion.com">support@dailymotion.com</a></p>
+    </div>
+
+</body>
+</html>
